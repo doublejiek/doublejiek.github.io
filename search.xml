@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F07%2F01%2FMy-first-blog%2F</url>
+    <content type="text"><![CDATA[GitPage的优点 可以绑定你的域名(但暂时貌似只能绑定一个)。 简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。 轻量级的博客系统，没有麻烦的配置 使用标记语言，比如 Markdown hexo 构建静态文件无法生成 index.html 等文件查看npm安装hexo插件情况 npm ls –depth 0 一些插件未安装 解决逐一安装缺失的包 npm install hexo-generator-archive –save npm install hexo-xxx-xxx –save … 执行hexo server出现Usage: hexo ”的提示出现这个原因是因为没有安装 hexo-server 解决 npm install hexo-server –save]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F06%2F30%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick Start Create a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>

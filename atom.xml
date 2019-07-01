@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>路长且远</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-07-01T16:00:23.437Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Doublejiek</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/01/My-first-blog/"/>
+    <id>http://yoursite.com/2019/07/01/My-first-blog/</id>
+    <published>2019-07-01T05:32:56.327Z</published>
+    <updated>2019-07-01T16:00:23.437Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="GitPage的优点"><a href="#GitPage的优点" class="headerlink" title="GitPage的优点"></a>GitPage的优点</h2><ul><li>可以绑定你的域名(但暂时貌似只能绑定一个)。</li><li>简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。</li><li>轻量级的博客系统，没有麻烦的配置</li><li>使用标记语言，比如 Markdown</li></ul><a id="more"></a><h2 id="hexo-构建静态文件无法生成-index-html-等文件"><a href="#hexo-构建静态文件无法生成-index-html-等文件" class="headerlink" title="hexo 构建静态文件无法生成 index.html 等文件"></a>hexo 构建静态文件无法生成 index.html 等文件</h2><h5 id="查看npm安装hexo插件情况"><a href="#查看npm安装hexo插件情况" class="headerlink" title="查看npm安装hexo插件情况"></a>查看npm安装hexo插件情况</h5><blockquote><p>npm ls –depth 0</p></blockquote><p>一些插件未安装</p><p><img src="http://huihut-img.oss-cn-shenzhen.aliyuncs.com/ganningZHexoNPMls.png" alt="Image text"></p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>逐一安装缺失的包</p><blockquote><p> npm install hexo-generator-archive –save</p><p> npm install hexo-xxx-xxx –save</p><p> …</p></blockquote><hr><h2 id="执行hexo-server出现Usage-hexo-”的提示"><a href="#执行hexo-server出现Usage-hexo-”的提示" class="headerlink" title="执行hexo server出现Usage: hexo ”的提示"></a>执行hexo server出现Usage: hexo <command>”的提示</h2><p>出现这个原因是因为没有安装 hexo-server</p><h1 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h1><blockquote><p>npm install hexo-server –save</p></blockquote><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;GitPage的优点&quot;&gt;&lt;a href=&quot;#GitPage的优点&quot; class=&quot;headerlink&quot; title=&quot;GitPage的优点&quot;&gt;&lt;/a&gt;GitPage的优点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以绑定你的域名(但暂时貌似只能绑定一个)。&lt;/li&gt;
+&lt;li&gt;简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。&lt;/li&gt;
+&lt;li&gt;轻量级的博客系统，没有麻烦的配置&lt;/li&gt;
+&lt;li&gt;使用标记语言，比如 Markdown&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/06/30/hello-world/"/>
+    <id>http://yoursite.com/2019/06/30/hello-world/</id>
+    <published>2019-06-30T06:06:47.014Z</published>
+    <updated>2019-07-01T15:57:06.323Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
