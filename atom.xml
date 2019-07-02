@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-01T16:00:23.437Z</updated>
+  <updated>2019-07-02T06:43:32.658Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/07/01/My-first-blog/"/>
-    <id>http://yoursite.com/2019/07/01/My-first-blog/</id>
-    <published>2019-07-01T05:32:56.327Z</published>
-    <updated>2019-07-01T16:00:23.437Z</updated>
+    <title>博客的搭建</title>
+    <link href="http://yoursite.com/2019/07/02/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+    <id>http://yoursite.com/2019/07/02/博客的搭建/</id>
+    <published>2019-07-02T06:22:02.000Z</published>
+    <updated>2019-07-02T06:43:32.658Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="GitPage的优点"><a href="#GitPage的优点" class="headerlink" title="GitPage的优点"></a>GitPage的优点</h2><ul><li>可以绑定你的域名(但暂时貌似只能绑定一个)。</li><li>简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。</li><li>轻量级的博客系统，没有麻烦的配置</li><li>使用标记语言，比如 Markdown</li></ul><a id="more"></a><h2 id="hexo-构建静态文件无法生成-index-html-等文件"><a href="#hexo-构建静态文件无法生成-index-html-等文件" class="headerlink" title="hexo 构建静态文件无法生成 index.html 等文件"></a>hexo 构建静态文件无法生成 index.html 等文件</h2><h5 id="查看npm安装hexo插件情况"><a href="#查看npm安装hexo插件情况" class="headerlink" title="查看npm安装hexo插件情况"></a>查看npm安装hexo插件情况</h5><blockquote><p>npm ls –depth 0</p></blockquote><p>一些插件未安装</p><p><img src="http://huihut-img.oss-cn-shenzhen.aliyuncs.com/ganningZHexoNPMls.png" alt="Image text"></p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>逐一安装缺失的包</p><blockquote><p> npm install hexo-generator-archive –save</p><p> npm install hexo-xxx-xxx –save</p><p> …</p></blockquote><hr><h2 id="执行hexo-server出现Usage-hexo-”的提示"><a href="#执行hexo-server出现Usage-hexo-”的提示" class="headerlink" title="执行hexo server出现Usage: hexo ”的提示"></a>执行hexo server出现Usage: hexo <command>”的提示</h2><p>出现这个原因是因为没有安装 hexo-server</p><h1 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h1><blockquote><p>npm install hexo-server –save</p></blockquote><hr>]]></content>
+    <content type="html"><![CDATA[<h2 id="GitPage的优点"><a href="#GitPage的优点" class="headerlink" title="GitPage的优点"></a>GitPage的优点</h2><ul><li>可以绑定你的域名(但暂时貌似只能绑定一个)。</li><li>简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。</li><li>轻量级的博客系统，没有麻烦的配置</li><li>使用标记语言，比如 Markdown</li></ul><a id="more"></a><h2 id="hexo-构建静态文件无法生成-index-html-等文件"><a href="#hexo-构建静态文件无法生成-index-html-等文件" class="headerlink" title="hexo 构建静态文件无法生成 index.html 等文件"></a>hexo 构建静态文件无法生成 index.html 等文件</h2><h5 id="查看npm安装hexo插件情况"><a href="#查看npm安装hexo插件情况" class="headerlink" title="查看npm安装hexo插件情况"></a>查看npm安装hexo插件情况</h5><blockquote><p>npm ls –depth 0</p></blockquote><p>一些插件未安装</p><p><img src="http://huihut-img.oss-cn-shenzhen.aliyuncs.com/ganningZHexoNPMls.png" alt="Image text"></p><h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>逐一安装缺失的包</p><blockquote><p> npm install hexo-generator-archive –save</p><p> npm install hexo-xxx-xxx –save</p><p> …</p></blockquote><hr><h2 id="执行hexo-server出现Usage-hexo-”的提示"><a href="#执行hexo-server出现Usage-hexo-”的提示" class="headerlink" title="执行hexo server出现Usage: hexo ”的提示"></a>执行hexo server出现Usage: hexo <command>”的提示</h2><p>出现这个原因是因为没有安装 hexo-server</p><h1 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h1><blockquote><p>npm install hexo-server –save</p></blockquote><hr><p>#部署GitHub</p><p>运行时出错，是没有添加sshkey</p><h3 id="一、生成新的SSH密钥"><a href="#一、生成新的SSH密钥" class="headerlink" title="一、生成新的SSH密钥"></a>一、生成新的SSH密钥</h3><p>1、打开Git Bash。</p><p>2、 进入.ssh 根目录下。</p><pre><code>cd ~/.ssh</code></pre><p>3、输入GitHub电子邮件地址，其中<a href="mailto:your_email@example.com" target="_blank" rel="noopener">your_email@example.com</a>是您关联的GitHub邮箱。</p><pre><code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></pre><p>4、输入保存的密钥文件并接受默认文件地址，按Enter键</p><blockquote><p>// 用提供的电子邮件作为标签创建一个新的ssh密钥。（无需操作）</p></blockquote><blockquote><p>Generating public/private rsa key pair. </p></blockquote><blockquote><p>// 输入名称并按Enter键，其中hexo_rsa可自行设置</p></blockquote><blockquote><p>Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):hexo_rsa</p></blockquote><p>5、输入安全密码，没有则为空，按Enter键进行下一步</p><blockquote><p>Enter passphrase (empty for no passphrase): [Type a passphrase]<br>Enter same passphrase again: [Type passphrase again]</p></blockquote><p><img src="https://segmentfault.com/img/bVbn2Yk?w=574&h=318" alt="Image text"></p><blockquote><p>Your identification has been saved in /home/you/.ssh/id_rsa.</p><p>Your public key has been saved in /home/you/.ssh/id_rsa.pub.</p><p>The key fingerprint is:</p><p>…………………此处是密钥内容…………………… <a href="mailto:your_email@example.com" target="_blank" rel="noopener">your_email@example.com</a></p></blockquote><p>此时，应该在默认路径下，生成了两个文件，一个是hexo_rsa，另一个是hexo_rsa.pub；</p><p>###二、将SSH密钥添加到SSH-Agent</p><p>在将新的SSH密钥添加到SSH-Agent管理密钥之前，您应该检查现有的SSH密钥。</p><pre><code>ls -al ~/ .ssh</code></pre><p>看下返回的结果中是否已经存在了.pub结尾的文件，如果没有需要生成一个新的，如果存在了，直接看将SSH密钥配置到Github账户；</p><p>6、启动ssh-agent，执行命令：</p><pre><code>eval $(ssh-agent -s)</code></pre><p><img src="https://image-static.segmentfault.com/248/865/2488652781-5c53c17548630_articlex" alt="Image text"></p><p>7、将SSH密钥添加到SSH-Agent,其中hexo_rsa是生成SSH设置的名称</p><pre><code>ssh-ADD~ /.ssh/hexo_rsa</code></pre><p>8、打开hexo_rsa.pub文件，复制其内容，然后打开Github账户，按图片步骤设置，最后将复制内容放置Key内容中，设置title，点击添加即可。</p><p><img src="https://image-static.segmentfault.com/234/007/2340075688-5c53c333cacd3_articlex" alt="Image text"></p><p>验证SSH链接是否成功，<br>输入命令：</p><pre><code>ssh -T git@github.com</code></pre><p>你将会看到</p><p><img src="https://image-static.segmentfault.com/166/300/1663009123-5c53c4d35cc8c_articlex" alt="Image text"></p><p>输入 “Yes”就ok了！</p><hr><p>###相关连接：<br><a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></p>]]></content>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
     
     </summary>
     
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
