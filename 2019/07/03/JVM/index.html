@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构 每个JVM都有两种机制  ①类装载子系统：装载具有适合名称的类或接口 ②执行引擎：负责执行包含在已装载的类或接口中的指令  #2.Java代码编译和执行的整个过程 开发人员编写Java代码(.java文件)，然后将之编译成字节">
+<meta name="description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构">
 <meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/JVM/index.html">
 <meta property="og:site_name" content="路长且远">
-<meta property="og:description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构 每个JVM都有两种机制  ①类装载子系统：装载具有适合名称的类或接口 ②执行引擎：负责执行包含在已装载的类或接口中的指令  #2.Java代码编译和执行的整个过程 开发人员编写Java代码(.java文件)，然后将之编译成字节">
+<meta property="og:description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://img-blog.csdn.net/20131105235523390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="https://img-blog.csdn.net/20131113150025609?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="https://img-blog.csdn.net/20131113150058015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="https://img-blog.csdn.net/20150515171400568">
-<meta property="og:image" content="https://img-blog.csdn.net/20131106003500328?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/03/ZtdL4S.gif">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/03/ZtwnD1.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/03/Ztw88e.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/03/ZtwfaV.jpg">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/03/ZtwTxJ.png">
 <meta property="og:image" content="http://hi.csdn.net/attachment/201009/25/0_1285425270cQVC.gif">
 <meta property="og:image" content="https://img-blog.csdn.net/20131106010426437?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/331425/201606/331425-20160624174234266-1575111287.png">
@@ -104,11 +104,11 @@
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/331425/201606/331425-20160624174249203-774809988.png">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/331425/201606/331425-20160624174250656-1729618538.png">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/331425/201606/331425-20160624174252078-703896755.png">
-<meta property="og:updated_time" content="2019-07-03T08:26:25.914Z">
+<meta property="og:updated_time" content="2019-07-03T08:34:43.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM">
-<meta name="twitter:description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构 每个JVM都有两种机制  ①类装载子系统：装载具有适合名称的类或接口 ②执行引擎：负责执行包含在已装载的类或接口中的指令  #2.Java代码编译和执行的整个过程 开发人员编写Java代码(.java文件)，然后将之编译成字节">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20131105235523390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta name="twitter:description" content="java由四方面组成： Java编程语言  Java类文件格式  Java虚拟机  Java应用程序接口(Java API)   关系如下图：  1.Java虚拟机体系结构">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/07/03/ZtdL4S.gif">
 
 
 
@@ -381,8 +381,10 @@
 </li>
 </ol>
 <p>关系如下图：</p>
-<p><img src="https://img-blog.csdn.net/20131105235523390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image text"></p>
-<h1 id="1-Java虚拟机体系结构"><a href="#1-Java虚拟机体系结构" class="headerlink" title="1.Java虚拟机体系结构"></a>1.Java虚拟机体系结构</h1><ul>
+<p><img src="https://s2.ax1x.com/2019/07/03/ZtdL4S.gif" alt="image text"></p>
+<h1 id="1-Java虚拟机体系结构"><a href="#1-Java虚拟机体系结构" class="headerlink" title="1.Java虚拟机体系结构"></a>1.Java虚拟机体系结构</h1><a id="more"></a>
+
+<ul>
 <li>每个JVM都有两种机制</li>
 </ul>
 <p>①类装载子系统：装载具有适合名称的类或接口</p>
@@ -390,9 +392,9 @@
 <p>#2.Java代码编译和执行的整个过程</p>
 <p>开发人员编写Java代码(.java文件)，然后将之编译成字节码(.class文件)，再然后字节码被装入内存，一旦字节码进入虚拟机，它就会被解释器解释执行，或者是被即时代码发生器有选择的转换成机器码执行。</p>
 <p>（1）Java代码到JVM字节码（编译）</p>
-<p><img src="https://img-blog.csdn.net/20131113150025609?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="image text"></p>
+<p><img src="https://s2.ax1x.com/2019/07/03/ZtwnD1.jpg" alt="image text"></p>
 <p>（2）JVM字节码到机器码（执行）</p>
-<p><img src="https://img-blog.csdn.net/20131113150058015?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="image text"></p>
+<p><img src="https://s2.ax1x.com/2019/07/03/Ztw88e.jpg" alt="image text"></p>
 <h3 id="编译到运行的三个机制"><a href="#编译到运行的三个机制" class="headerlink" title="编译到运行的三个机制"></a>编译到运行的三个机制</h3><p>（1）Java源码编译机制</p>
 <p>①分析和输入到符号表</p>
 <p>②注解处理</p>
@@ -405,8 +407,8 @@
 <p>1.装载load 。目的是生成类加载实例id </p>
 <p>2.链接 ，检测字节码格式以及内部调用匹配情况。静态变量初始化 </p>
 <p>3.初始化。主要是类加载器加载类的顺序。 </p>
-<p><img src="https://img-blog.csdn.net/20150515171400568" alt></p>
-<p><img src="https://img-blog.csdn.net/20131106003500328?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9wYW5kYQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt></p>
+<p><img src="https://s2.ax1x.com/2019/07/03/ZtwfaV.jpg" alt></p>
+<p><img src="https://s2.ax1x.com/2019/07/03/ZtwTxJ.png" alt></p>
 <p>加载过程中会先检查类是否被已加载，检查顺序是自底向上，从Custom ClassLoader到BootStrap ClassLoader逐层检查，只要某个classloader已加载就视为已加载此类，保证此类只所有ClassLoader加载一次。而加载的顺序是自顶向下，也就是由上层来逐层尝试加载此类。</p>
 <p>（3）类执行机制</p>
 <p>JVM是基于堆栈的虚拟机。JVM为每个新创建的线程都分配一个堆栈.也就是说,对于一个Java程序来说，它的运行就是通过对堆栈的操作来完成的。堆栈以帧为单位保存线程的状态。JVM对堆栈只进行两种操作:以帧为单位的压栈和出栈操作。</p>
