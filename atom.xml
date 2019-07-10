@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-10T08:55:38.222Z</updated>
+  <updated>2019-07-10T08:58:52.133Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,23 +21,18 @@
     <link href="http://yoursite.com/2019/07/10/%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/07/10/笔记/</id>
     <published>2019-07-10T08:54:37.000Z</published>
-    <updated>2019-07-10T08:55:38.222Z</updated>
+    <updated>2019-07-10T08:58:52.133Z</updated>
     
-    <content type="html"><![CDATA[<p>##Maven<br>Maven 导入jar包</p><p>##框架</p><blockquote><p>Hibernate（JPA）</p><p>Spring boot</p></blockquote><p>##Spring MVC</p><blockquote><p>SpringMVC是一种基于Java，实现了Web MVC设计模式，请求驱动类型的轻量级Web框架，将Web层进行职责解耦。（请求驱动即 请求-响应模型）</p><p>浏览器识别程序的桥梁</p></blockquote><p>Model    实体类      数据库的映射类</p><p>View     视图        页面</p><p>Controller 控制器      通信代码</p><p>##注解</p><p>@Autowired 相当于引用这个类</p><p>带有@Controller的程序类才能被浏览器识别</p><p>@RequestMapper 地址路由连接器</p><blockquote><pre><code>@RequestMapping(“/”)`</code></pre><p>这个(“/”) 就是浏览器要寻找的程序地址</p></blockquote><p>@ResponseBody 注解就是返回的数据格式为json<br>没加代表返回的数据格式是页面</p><blockquote><pre><code>@RequestMapping(&quot;/json&quot;)@ResponseBody</code></pre></blockquote><p>##jquery三大选择器<br>Id选择器 ——》 $(#id)</p><p>Class 选择器 –》 $(.class)</p><p>Element 标签选择器 $(Element ) </p><blockquote><p>jquery 绑定点击事件</p></blockquote><pre><code>$(&quot;#btn&quot;).click(function(){ alert(“点击了”)     });</code></pre><p>jQuery方法</p><pre><code>Val()  取值 val(123) 设置attr()  取属性值  attr(“name”,”kd”) 设置Append() 追加方法Html()替换html方法Each(data,function(index,item))  循环方法</code></pre><p>##Ajax</p><p>Ajax 是异步请求后台数据的方法，可以局部刷新页面</p><blockquote><p>$.post(地址,参数,回调地址)</p><p>Get 也一样</p><p>$.get(地址,参数,回调地址)</p></blockquote><pre><code> $.post(&quot;/loginCheck&quot;,{&quot;name&quot;:name,&quot;pwd&quot;:pwd},function(json){    //成功跳转页面，不成功则登录页面弹出对话框      if(json.msg==&quot;yes&quot;){         location.href=&quot;/user/list&quot;;      }else{          alert(&quot;登录失败&quot;)      }  })// 登录验证@RequestMapping(&quot;/loginCheck&quot;)@ResponseBodypublic Map&lt;String, Object&gt;  loginCheck(String name,String pwd) {    Map&lt;String, Object&gt;map=new HashMap&lt;&gt;();    if(&quot;admin&quot;.equals(name) &amp;&amp; &quot;123456&quot;.equals(pwd)){        map.put(&quot;msg&quot;, &quot;yes&quot;);    }else{        map.put(&quot;msg&quot;, &quot;no&quot;);        //控制台        System.out.println(&quot;登录失败&quot;);    }        return map;}</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>##Maven<br>Maven 导入jar包</p><p>##框架</p><blockquote><p>Hibernate（JPA）</p><p>Spring boot</p></blockquote><a id="more"></a><p>##Spring MVC</p><blockquote><p>SpringMVC是一种基于Java，实现了Web MVC设计模式，请求驱动类型的轻量级Web框架，将Web层进行职责解耦。（请求驱动即 请求-响应模型）</p><p>浏览器识别程序的桥梁</p></blockquote><p>Model    实体类      数据库的映射类</p><p>View     视图        页面</p><p>Controller 控制器      通信代码</p><p>##注解</p><p>@Autowired 相当于引用这个类</p><p>带有@Controller的程序类才能被浏览器识别</p><p>@RequestMapper 地址路由连接器</p><blockquote><pre><code>@RequestMapping(“/”)`</code></pre><p>这个(“/”) 就是浏览器要寻找的程序地址</p></blockquote><p>@ResponseBody 注解就是返回的数据格式为json<br>没加代表返回的数据格式是页面</p><blockquote><pre><code>@RequestMapping(&quot;/json&quot;)@ResponseBody</code></pre></blockquote><p>##jquery三大选择器<br>Id选择器 ——》 $(#id)</p><p>Class 选择器 –》 $(.class)</p><p>Element 标签选择器 $(Element ) </p><blockquote><p>jquery 绑定点击事件</p></blockquote><pre><code>$(&quot;#btn&quot;).click(function(){ alert(“点击了”)     });</code></pre><p>jQuery方法</p><pre><code>Val()  取值 val(123) 设置attr()  取属性值  attr(“name”,”kd”) 设置Append() 追加方法Html()替换html方法Each(data,function(index,item))  循环方法</code></pre><p>##Ajax</p><p>Ajax 是异步请求后台数据的方法，可以局部刷新页面</p><blockquote><p>$.post(地址,参数,回调地址)</p><p>Get 也一样</p><p>$.get(地址,参数,回调地址)</p></blockquote><pre><code> $.post(&quot;/loginCheck&quot;,{&quot;name&quot;:name,&quot;pwd&quot;:pwd},function(json){    //成功跳转页面，不成功则登录页面弹出对话框      if(json.msg==&quot;yes&quot;){         location.href=&quot;/user/list&quot;;      }else{          alert(&quot;登录失败&quot;)      }  })// 登录验证@RequestMapping(&quot;/loginCheck&quot;)@ResponseBodypublic Map&lt;String, Object&gt;  loginCheck(String name,String pwd) {    Map&lt;String, Object&gt;map=new HashMap&lt;&gt;();    if(&quot;admin&quot;.equals(name) &amp;&amp; &quot;123456&quot;.equals(pwd)){        map.put(&quot;msg&quot;, &quot;yes&quot;);    }else{        map.put(&quot;msg&quot;, &quot;no&quot;);        //控制台        System.out.println(&quot;登录失败&quot;);    }        return map;}</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;##Maven&lt;br&gt;Maven 导入jar包&lt;/p&gt;
+      &lt;p&gt;##Maven&lt;br&gt;Maven 导入jar包&lt;/p&gt;
 &lt;p&gt;##框架&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hibernate（JPA）&lt;/p&gt;
 &lt;p&gt;Spring boot&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;##Spring MVC&lt;/p&gt;
-&lt;blockquo
-      
     
     </summary>
     
