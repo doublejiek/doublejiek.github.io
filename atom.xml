@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-10T09:02:42.166Z</updated>
+  <updated>2019-07-23T14:33:25.060Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>笔记</title>
+    <title></title>
     <link href="http://yoursite.com/2019/07/10/%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/07/10/笔记/</id>
-    <published>2019-07-10T08:54:37.000Z</published>
-    <updated>2019-07-10T09:02:42.166Z</updated>
+    <published>2019-07-10T08:54:37.374Z</published>
+    <updated>2019-07-23T14:33:25.060Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><p>Maven 导入jar包</p><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><blockquote><p>Hibernate（JPA）</p><p>Spring boot</p></blockquote><a id="more"></a><h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><blockquote><p>SpringMVC是一种基于Java，实现了Web MVC设计模式，请求驱动类型的轻量级Web框架，将Web层进行职责解耦。（请求驱动即 请求-响应模型）</p><p>浏览器识别程序的桥梁</p></blockquote><p>Model    实体类      数据库的映射类</p><p>View     视图        页面</p><p>Controller 控制器      通信代码</p><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>@Autowired 相当于引用这个类</p><p>带有@Controller的程序类才能被浏览器识别</p><p>@RequestMapper 地址路由连接器</p><blockquote><pre><code>@RequestMapping(“/”)`</code></pre><p>这个(“/”) 就是浏览器要寻找的程序地址</p></blockquote><p>@ResponseBody 注解就是返回的数据格式为json<br>没加代表返回的数据格式是页面</p><blockquote><pre><code>@RequestMapping(&quot;/json&quot;)@ResponseBody</code></pre></blockquote><h2 id="jquery三大选择器"><a href="#jquery三大选择器" class="headerlink" title="jquery三大选择器"></a>jquery三大选择器</h2><p>Id选择器 ——》 $(#id)</p><p>Class 选择器 –》 $(.class)</p><p>Element 标签选择器 $(Element ) </p><blockquote><p>jquery 绑定点击事件</p></blockquote><pre><code>$(&quot;#btn&quot;).click(function(){ alert(“点击了”)     });</code></pre><p>jQuery方法</p><pre><code>Val()  取值 val(123) 设置attr()  取属性值  attr(“name”,”kd”) 设置Append() 追加方法Html()替换html方法Each(data,function(index,item))  循环方法</code></pre><h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>Ajax 是异步请求后台数据的方法，可以局部刷新页面</p><blockquote><p>$.post(地址,参数,回调地址)</p><p>Get 也一样</p><p>$.get(地址,参数,回调地址)</p></blockquote><pre><code> $.post(&quot;/loginCheck&quot;,{&quot;name&quot;:name,&quot;pwd&quot;:pwd},function(json){    //成功跳转页面，不成功则登录页面弹出对话框      if(json.msg==&quot;yes&quot;){         location.href=&quot;/user/list&quot;;      }else{          alert(&quot;登录失败&quot;)      }  })// 登录验证@RequestMapping(&quot;/loginCheck&quot;)@ResponseBodypublic Map&lt;String, Object&gt;  loginCheck(String name,String pwd) {    Map&lt;String, Object&gt;map=new HashMap&lt;&gt;();    if(&quot;admin&quot;.equals(name) &amp;&amp; &quot;123456&quot;.equals(pwd)){        map.put(&quot;msg&quot;, &quot;yes&quot;);    }else{        map.put(&quot;msg&quot;, &quot;no&quot;);        //控制台        System.out.println(&quot;登录失败&quot;);    }        return map;}</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><h2 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h2><h4 id="Hibernate（JPA）"><a href="#Hibernate（JPA）" class="headerlink" title="Hibernate（JPA）"></a>Hibernate（JPA）</h4><blockquote><p>一个开源的对象关系映射框架</p><p>对JDBC进行了非常轻量级的对象封装</p><p>将JacaBean对象和数据库的表建立对应关系</p><p>它是一个优秀的Java持久化层（DAO）解决方案</p><p>是当今主流的对象——关系映射工具</p><p>它简化了JDBC繁琐的编码，将数据库的连接信息都放置在配置文件中</p></blockquote><p>&lt;–!more–&gt;</p><p>####Mybatis</p><blockquote><p>MyBatis是一个支持普通SQL查询，存储过程和高级映射的优秀持久层框架。</p><p>MyBatis消除了几乎所有的JDBC代码和参数的手工设置以及对结果集的检索封装。</p><p>MyBatis可以使用简单的XML或注解用于配置和原始映射，将接口和Java的POJO（Plain Old Java Objects，普通的Java对象）映射成数据库中的记录。</p></blockquote><p>####Hibernate和Mybatis的区别</p><blockquote><p>一、MyBatis 真正实现了java代码和sql的分离</p><p>二、Hibernate 是全自动的，MyBatis是半自动的 Hibernate实现了部分自动生成SQL</p><p>三、SQL优化上 MyBatis 强于 Hibernate</p><pre><code>1、MyBatis优化维护方便 SQL全存在于XML中 不需要修改源代码2、开发效率上 Hibernate略强于mybatiss3、从性能上说，对性能要求不是很高的项目来说，因为Mybatis全都   是自己手写的SQL 因此性能相对较高，   Hibernate更加提倡使用HQL HQL往往会查询更多的字段，性能反而   较低。4、从更新功能上来说 Hibernate会更新所有字段 而MyBatis可以   只需要更新意个字段5、Hibernate相对来说简化了DAO类的书写</code></pre></blockquote><p>##Spring MVC</p><blockquote><p>SpringMVC是一种基于Java，实现了Web MVC设计模式，请求驱动类型的轻量级Web框架，将Web层进行职责解耦。（请求驱动即 请求-响应模型）</p><p>浏览器识别程序的桥梁</p></blockquote><p>Model    实体类      数据库的映射类</p><p>View     视图        页面</p><p>Controller 控制器      通信代码</p><h2 id="Spring-一站式框架"><a href="#Spring-一站式框架" class="headerlink" title="Spring 一站式框架"></a>Spring 一站式框架</h2><p>web层：Spring MVC</p><p>业务层（Service）：Spring的Bean管理，声明式事务</p><p>持久层（DAO）：ORM模块、JDBC模板</p><blockquote><p>对象-关系映射（OBJECT/RELATIONALMAPPING，简称ORM），是随着面向对象的软件开发方法发展而产生的。用来把对象模型表示的对象映射到基于S Q L 的关系模型数据库结构中去。这样，我们在具体的操作实体对象的时候，就不需要再去和复杂的 SQ L 语句打交道，只需简单的操作实体对象的属性和方法。ORM技术是在对象和关系之间提供了一条桥梁，前台的对象型数据和数据库中的关系型的数据通过这个桥梁来相互转化。</p></blockquote><p>##Maven<br>Maven 导入jar包</p><p>##注解</p><p>@RequestMapper 地址路由连接器</p><blockquote><pre><code>@RequestMapping(“/”)`</code></pre><p>这个(“/”) 就是浏览器要寻找的程序地址</p></blockquote><p>@ResponseBody 注解就是返回的数据格式为json<br>没加代表返回的数据格式是页面</p><blockquote><pre><code>@RequestMapping(&quot;/json&quot;)@ResponseBody</code></pre></blockquote><h3 id="IOC注解"><a href="#IOC注解" class="headerlink" title="IOC注解"></a>IOC注解</h3><h4 id="Component-：组件"><a href="#Component-：组件" class="headerlink" title="@Component ：组件"></a>@Component ：组件</h4><p>其三个衍生注解（功能类似），修饰类：</p><blockquote><p>@Controller ：web层（带有@Controller的程序类才能被浏览器识别）</p><p>@Service    ：service层</p><p>@Repository ：dao层</p></blockquote><h4 id="属性注入的注解"><a href="#属性注入的注解" class="headerlink" title="属性注入的注解"></a>属性注入的注解</h4><p>普通属性：</p><blockquote><p>@Value        ：设置普通属性的值</p></blockquote><p>对象类型属性：</p><blockquote><p>@Autowired    ：设置对象类型的属性值，但 是按照类型 完成属性注入（相当于引用这个类）</p><p>@Qualifier（value=””）：按名称完成属性注入</p><p>@Resource（name=””）  ：按名称完成属性注入</p></blockquote><h4 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h4><p>Bean作用范围的注解</p><blockquote><p>@Scope        ：作用范围</p><p>@Scope(singleton)     ：默认单例</p><p>@Scope(prototype)     ：多例</p></blockquote><p>##jquery三大选择器<br>Id选择器 ——》 $(#id)</p><p>Class 选择器 –》 $(.class)</p><p>Element 标签选择器 $(Element ) </p><blockquote><p>jquery 绑定点击事件</p></blockquote><pre><code>$(&quot;#btn&quot;).click(function(){ alert(“点击了”)     });</code></pre><p>jQuery方法</p><pre><code>Val()  取值 val(123) 设置attr()  取属性值  attr(“name”,”kd”) 设置Append() 追加方法Html()替换html方法Each(data,function(index,item))  循环方法</code></pre><p>##Ajax</p><p>Ajax 是异步请求后台数据的方法，可以局部刷新页面</p><blockquote><p>$.post(地址,参数,回调地址)</p><p>Get 也一样</p><p>$.get(地址,参数,回调地址)</p></blockquote><pre><code> $.post(&quot;/loginCheck&quot;,{&quot;name&quot;:name,&quot;pwd&quot;:pwd},function(json){    //成功跳转页面，不成功则登录页面弹出对话框      if(json.msg==&quot;yes&quot;){         location.href=&quot;/user/list&quot;;      }else{          alert(&quot;登录失败&quot;)      }  })// 登录验证@RequestMapping(&quot;/loginCheck&quot;)@ResponseBodypublic Map&lt;String, Object&gt;  loginCheck(String name,String pwd) {    Map&lt;String, Object&gt;map=new HashMap&lt;&gt;();    if(&quot;admin&quot;.equals(name) &amp;&amp; &quot;123456&quot;.equals(pwd)){        map.put(&quot;msg&quot;, &quot;yes&quot;);    }else{        map.put(&quot;msg&quot;, &quot;no&quot;);        //控制台        System.out.println(&quot;登录失败&quot;);    }        return map;}</code></pre><h2 id="IOC和DI"><a href="#IOC和DI" class="headerlink" title="IOC和DI"></a>IOC和DI</h2><p>IOC：控制反转</p><pre><code>将对象的创建权反转给Spring</code></pre><ol><li>下载jar开发包</li><li>引入jar包</li><li>创建接口和实现类</li><li>将接口和实现类交给Spring管理</li><li>编写测试类</li></ol><p>DI：依赖注入</p><pre><code>前提必须有IOC环境，Spring管理这个类的时候将这个类的依赖属性注入（设置）进来</code></pre><p>AOP（面向切面编程）：AOP的开发对程序进行扩展</p><h2 id="Spring开发包"><a href="#Spring开发包" class="headerlink" title="Spring开发包"></a>Spring开发包</h2><ol><li><p>dosc：开发规范和API</p></li><li><p>libs：jar和源码</p></li><li><p>shema：配置文件和约束</p></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;Maven 导入jar包&lt;/p&gt;
-&lt;h2 id=&quot;框架&quot;&gt;&lt;a href=&quot;#框架&quot; class=&quot;headerlink&quot; title=&quot;框架&quot;&gt;&lt;/a&gt;框架&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Hibernate（JPA）&lt;/p&gt;
-&lt;p&gt;Spring boot&lt;/p&gt;
-&lt;/blockquote&gt;
+      
+      
+        &lt;h2 id=&quot;框架&quot;&gt;&lt;a href=&quot;#框架&quot; class=&quot;headerlink&quot; title=&quot;框架&quot;&gt;&lt;/a&gt;框架&lt;/h2&gt;&lt;h2 id=&quot;ORM&quot;&gt;&lt;a href=&quot;#ORM&quot; class=&quot;headerlink&quot; title=&quot;ORM&quot;&gt;&lt;/a&gt;ORM&lt;/h2&gt;&lt;h
+      
     
     </summary>
     
@@ -92,25 +91,6 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/06/30/hello-world/"/>
-    <id>http://yoursite.com/2019/06/30/hello-world/</id>
-    <published>2019-06-30T06:06:47.014Z</published>
-    <updated>2019-07-01T15:57:06.323Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;
-    
-    </summary>
-    
     
   </entry>
   
